@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto X-9</title>
+    <link rel="stylesheet" href="UX_UI_X9.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Tela de Login -->
+        <div id="login-screen" class="screen">
+            <h1>Projeto X-9</h1>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Senha">
+            <button onclick="login()">Login</button>
+            <p>Não tem uma conta? <a href="#" onclick="showScreen('register-screen')">Registrar-se</a></p>
+            <p><a href="#" onclick="showScreen('forgot-password-screen')">Esqueci minha senha</a></p>
+        </div>
+
+        <!-- Tela de Registro -->
+        <div id="register-screen" class="screen" style="display:none;">
+            <h1>Registrar</h1>
+            <input type="email" id="register-email" placeholder="Email">
+            <input type="password" id="register-password" placeholder="Senha">
+            <button onclick="register()">Registrar</button>
+            <p>Já tem uma conta? <a href="#" onclick="showScreen('login-screen')">Login</a></p>
+        </div>
+
+        <!-- Tela Principal -->
+        <div id="main-menu" class="screen" style="display:none;">
+            <h1>Projeto X-9</h1>
+            <button onclick="showScreen('report-screen')">Registrar Denúncia</button>
+            <button onclick="showScreen('my-reports-screen')">Minhas Denúncias</button>
+            <button onclick="showScreen('profile-screen')">Perfil</button>
+            <button onclick="logout()">Sair</button>
+        </div>
+
+        <!-- Tela de Registrar Denúncia -->
+        <div id="report-screen" class="screen" style="display:none;">
+            <h1>Registrar Denúncia</h1>
+            <textarea id="report-description" placeholder="Descrição"></textarea>
+            <button onclick="takePhoto()">Tirar Foto</button>
+            <img id="report-photo" alt="Foto da Denúncia">
+            <p id="location-status"></p>
+            <button onclick="getLocation()">Capturar Localização</button>
+            <button onclick="sendReport()">Enviar</button>
+            <button onclick="showScreen('main-menu')">Voltar</button>
+        </div>
+
+        <!-- Tela de Minhas Denúncias -->
+        <div id="my-reports-screen" class="screen" style="display:none;">
+            <h1>Minhas Denúncias</h1>
+            <ul id="reports-list"></ul>
+            <button onclick="showScreen('main-menu')">Voltar</button>
+        </div>
+
+        <!-- Tela de Perfil -->
+        <div id="profile-screen" class="screen" style="display:none;">
+            <h1>Perfil</h1>
+            <input type="text" id="profile-name" placeholder="Nome">
+            <input type="email" id="profile-email" placeholder="Email">
+            <button onclick="saveProfile()">Salvar</button>
+            <button onclick="showScreen('main-menu')">Voltar</button>
+        </div>
+
+        <!-- Tela de Recuperação de Senha -->
+        <div id="forgot-password-screen" class="screen" style="display:none;">
+            <h1>Recuperar Senha</h1>
+            <input type="email" id="forgot-password-email" placeholder="Email">
+            <button onclick="recoverPassword()">Recuperar</button>
+            <button onclick="showScreen('login-screen')">Voltar</button>
+        </div>
+    </div>
+
+    <script src="UX_UI_X9.js"></script>
+</body>
+</html>

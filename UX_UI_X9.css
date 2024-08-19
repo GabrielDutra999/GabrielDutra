@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#app {
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen h1 {
+    margin-bottom: 20px;
+}
+
+.screen input, .screen textarea, .screen button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.screen button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.screen button:hover {
+    background-color: #0056b3;
+}
+
+#report-photo {
+    width: 100%;
+    margin: 10px 0;
+    display: none;
+}
+
+#location-status {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #555;
+}
