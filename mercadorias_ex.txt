@@ -1,0 +1,3 @@
+sapato = 10.00
+tenis = 15.00
+sandalia = 5.00
